@@ -1,0 +1,80 @@
+:root{--bg:#FBF7F0;--ink:#2A2622;--muted:#625A50;--line:#E6DDCE;--panel:#F4ECDD;--accent:#B4532A;--accent-ink:#8F3F1D;--r:14px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 18px/1.65 "Nunito Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:400;line-height:1.15;margin:0}
+a{color:var(--accent-ink)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.skip{position:absolute;left:-999px;top:0;background:var(--ink);color:#fff;padding:.6rem 1rem;z-index:9}
+.skip:focus{left:8px;top:8px}
+.bar{margin:0;padding:.55rem 1rem;background:var(--panel);color:var(--ink);text-align:center;font-size:.9rem;line-height:1.4}
+.top{padding:1.1rem 1.25rem}
+.brand{display:inline-flex;align-items:center;gap:.6rem;font:600 1.15rem Fraunces,Georgia,serif;color:var(--ink);text-decoration:none}
+main{max-width:40rem;margin:0 auto;padding:0 1.25rem}
+.hero{padding:3.5rem 0 4rem;text-align:center}
+.kicker{font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-ink);font-weight:700;margin:0 0 1rem}
+h1{font-size:clamp(2.6rem,9vw,4.4rem);letter-spacing:-.01em}
+.si{margin:1.6rem auto 2rem;max-width:34rem;font-size:1.1rem;color:var(--muted)}
+.si b{color:var(--ink)}
+.join-row{display:flex;flex-direction:column;gap:.75rem}
+.f-lab{display:block;text-align:left;font-weight:700;font-size:.9rem;margin-bottom:.35rem}
+input[type=email]{width:100%;font:inherit;padding:.95rem 1rem;border:1.5px solid #8A7F70;border-radius:var(--r);background:#fff;color:var(--ink);min-height:52px}
+.btn{font:700 1rem "Nunito Sans",sans-serif;background:var(--accent-ink);color:#fff;border:0;border-radius:999px;padding:.95rem 1.6rem;min-height:52px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center}
+.btn:hover{background:#6F2F14}
+.btn:disabled{opacity:.6;cursor:wait}
+.btn.line{background:transparent;color:var(--accent-ink);border:1.5px solid var(--accent-ink)}
+.btn.line:hover{background:var(--panel)}
+.fine{font-size:.85rem;color:var(--muted);margin:.6rem 0 0}
+.err{color:#9B2226;font-size:.9rem;margin:.4rem 0 0;min-height:1.2em}
+input[aria-invalid=true]{border-color:#9B2226}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.done{background:var(--panel);border-radius:var(--r);padding:1.4rem;text-align:left}
+.done h3{font-size:1.5rem}
+.sit{text-align:center;padding:3rem 1.25rem;background:var(--panel);margin:0 -1.25rem;border-radius:0}
+h2{font-size:clamp(1.7rem,5vw,2.3rem)}
+.sub{color:var(--muted);margin:.5rem 0 1.5rem}
+.ring{position:relative;width:min(70vw,260px);aspect-ratio:1;margin:0 auto 1.5rem}
+.ring svg{width:100%;height:100%;transform:rotate(-90deg)}
+.trk{fill:none;stroke:var(--line);stroke-width:4}
+.arc{fill:none;stroke:var(--accent);stroke-width:4;stroke-linecap:round;transition:stroke-dashoffset .3s linear}
+.clock{position:absolute;inset:0;display:grid;place-items:center;font:400 2.6rem Fraunces,Georgia,serif}
+.ring.on .clock{animation:breathe 8s ease-in-out infinite}
+@keyframes breathe{50%{opacity:.55}}
+.opts{display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap;margin-bottom:1.25rem}
+.opts button{font:600 .95rem "Nunito Sans",sans-serif;padding:.6rem 1rem;min-height:44px;border-radius:999px;border:1.5px solid #8A7F70;background:transparent;color:var(--ink);cursor:pointer}
+.opts button[aria-pressed=true]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.state{color:var(--muted);min-height:3em;margin:1rem auto 0;max-width:26rem}
+.band{padding:3.5rem 0;border-top:1px solid var(--line)}
+.sit+.band{border-top:0}
+.lead{color:var(--muted);margin:1rem 0 0}
+.three{list-style:none;padding:0;margin:2rem 0 0;display:grid;gap:1.75rem}
+.three h3{font-size:1.3rem;margin-bottom:.3rem}
+.three p{margin:0;color:var(--muted)}
+.soon{list-style:none;padding:0;margin:1.5rem 0 0}
+.soon li{padding:1rem 0;border-bottom:1px solid var(--line)}
+.soon b{display:block;font:400 1.25rem Fraunces,Georgia,serif}
+.soon span{color:var(--muted)}
+.tiers{display:grid;gap:1rem;margin-top:2rem}
+.tier{border:1px solid var(--line);border-radius:var(--r);padding:1.4rem;background:#fff}
+.tier h3{font-size:1.4rem}
+.price{margin:.6rem 0 1rem;color:var(--muted);font-size:.95rem}
+.price b{font:600 2rem Fraunces,Georgia,serif;color:var(--ink)}
+.price span{display:block}
+.tier ul{padding-left:1.1rem;margin:0 0 1rem}
+.res{font-size:.9rem;color:var(--muted);margin:0}
+.res em{display:block;font-style:normal;font-weight:700;color:var(--accent-ink)}
+.note{font-size:.9rem;color:var(--muted);margin-top:1.5rem}
+.last{text-align:center}
+.last h2{margin-bottom:1.5rem}
+.foot{max-width:40rem;margin:0 auto;padding:2rem 1.25rem 3rem;font-size:.85rem;color:var(--muted);border-top:1px solid var(--line)}
+@media (min-width:640px){.join-row{flex-direction:row;align-items:stretch}.join-row input{flex:1}.tiers{grid-template-columns:1fr 1fr}.sit{border-radius:20px;margin:0}}
+
+.night{text-align:center;padding:3.5rem 0}
+.card-stage{margin:2rem auto 0;max-width:28rem;min-height:13rem;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.75rem}
+.card{font:italic 400 clamp(1.4rem,5vw,1.9rem)/1.35 Fraunces,Georgia,serif;margin:0;transition:opacity .45s ease}
+.card.gone{opacity:0}
+.count{color:var(--muted);font-size:.85rem;margin:1.25rem 0 0}
+/* placeholder logo slot (see README) */
+a.brand img.brand-logo,a.logo img.brand-logo,img.brand-logo{display:block;height:38px;width:auto;max-width:100%}
+.terms{font:600 clamp(1.35rem,5.4vw,2.1rem)/1.2 Fraunces,Georgia,serif;color:var(--ink);margin:1rem 0 0}.terms .t-si{color:var(--accent-ink)}

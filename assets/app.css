@@ -77,4 +77,5 @@ h2{font-size:clamp(1.7rem,5vw,2.3rem)}
 .count{color:var(--muted);font-size:.85rem;margin:1.25rem 0 0}
 /* placeholder logo slot (see README) */
 a.brand img.brand-logo,a.logo img.brand-logo,img.brand-logo{display:block;height:38px;width:auto;max-width:100%}
+.trade-name span{display:inline-block;margin:0 .6rem}.trade-name{max-width:70rem;margin:0 auto;padding:1rem 16px 1.75rem;font-size:.9rem;line-height:1.4;text-align:center;color:inherit;opacity:.85;grid-column:1/-1}
 .terms{font:600 clamp(1.35rem,5.4vw,2.1rem)/1.2 Fraunces,Georgia,serif;color:var(--ink);margin:1rem 0 0}.terms .t-si{color:var(--accent-ink)}
